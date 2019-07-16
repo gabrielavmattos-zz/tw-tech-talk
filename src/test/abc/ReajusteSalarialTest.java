@@ -10,19 +10,19 @@ public class ReajusteSalarialTest {
     @Test
     public void reajuste_deveRetornarSalarioAjustadoComQuatroPorcento_quandoForAcimaDeDoisMilReais() {
 
-        ReajusteSalarial salario = new ReajusteSalarial(2000.0);
+        ReajusteSalarial reajusteSalarial = new ReajusteSalarial(2000.0);
 
-        Double salarioAjustado = salario.reajuste();
-        assertThat(2080.0, is(salarioAjustado));
+        Double salarioAjustado = reajusteSalarial.reajuste();
+        assertThat(salarioAjustado, is(2080.0));
     }
 
     @Test
     public void reajuste_deveRetornarSalarioSemReajuste_quandoForAbaixoDeDoisMilReais() {
 
-        ReajusteSalarial salario = new ReajusteSalarial(1000.0);
+        ReajusteSalarial reajusteSalarial = new ReajusteSalarial(1000.0);
 
-        Double salarioAjustado = salario.reajuste();
-        assertThat(1000.0, is(salarioAjustado));
+        Double salarioAjustado = reajusteSalarial.reajuste();
+        assertThat(salarioAjustado, is(1000.0));
     }
 
 }
