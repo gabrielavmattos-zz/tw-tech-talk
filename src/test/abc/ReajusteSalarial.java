@@ -13,6 +13,11 @@ public class ReajusteSalarial {
         if (salario >= 2000) {
             ajuste = 0.04;
         }
+
+        if (salario < 1000) {
+            ajuste = 0.20;
+        }
+
         return salario + salario * ajuste;
     }
 }
